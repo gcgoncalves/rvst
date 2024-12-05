@@ -1,0 +1,280 @@
+/*---------------*/
+/*-- VARIABLES --*/
+/*---------------*/
+
+$white: #EEE;
+$black: #151515;
+
+/*---------------*/
+/*---- RESETS ---*/
+/*---------------*/
+
+* {
+  margin:0px;
+  padding:0px;
+  border:0;
+  box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  -webkit-box-sizing:border-box; }
+
+body{
+  margin:0;
+  padding:0;
+  border:0;
+}
+
+/*---------------*/
+/*---- HOME -----*/
+/*---------------*/
+body{
+  background: url("../img/bg_fs.jpg") fixed 50% / cover;
+  -webkit-background-size:cover;
+  -moz-background-size:cover;
+  -o-background-size:cover;
+  background-size:cover;
+  -webkit-transform-style:preserve-3d;
+  -moz-transform-style:preserve-3d;
+  transform-style:preserve-3d;
+  color: $white;
+
+  &.noscroll{
+    position:fixed;
+    overflow: hidden;
+  }
+}
+
+.home_body{
+  height:100%;
+  margin:0px;
+  padding:0px;
+
+  .header{
+    display:inline-flex;
+    background:$black;
+
+    .logo{
+      margin:0;
+      padding:0;
+      min-width: 400px;
+      h1 {
+        margin:0;
+        padding:0;
+      }
+    }
+
+    .main_nav {
+      height:100px;
+
+      .nav_menu {
+        position:relative;
+        top:50%;
+        -ms-transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        transform:translateY(-50%);
+      }
+    }
+
+    .btn_pill{
+      border: 1px solid $white;
+      background-color: #151515;
+      color: $white;
+      font-size: 14px;
+      font-weight: 400;
+      margin-top: 10px;
+      border-radius:20px;
+      display: inline-block;
+      line-height: 1.42857;
+      margin-bottom: 0;
+      padding: 6px 12px;
+      text-align: center;
+      vertical-align: middle;
+      white-space: nowrap;
+    }
+
+    #release > .lang-selector{ display: none; }
+
+    .contact{
+      .contact-email { display:none; }
+    }
+
+    a {
+      color: $white;
+      text-decoration: none;
+    }
+  }
+
+  .main_box {
+    padding:20px;
+
+    .centralized {
+      position:relative;
+      width:100%;
+      max-width: 1000px;
+      margin: 0 auto;
+
+      .record {
+        display: inline-block;
+        max-width:600px;
+      }
+
+      .album-switcher {
+        display: inline-block;
+        margin: 0 30px;
+        width: 300px;
+      }
+
+      img {
+        width:100%;
+      }
+
+      .overlay {
+        background:rgba(0,0,0,.75);
+        position:absolute;
+        top:0px;
+        left:0px;
+        width:100%;
+        height:100%;
+        max-width:600px;
+        opacity:0;
+        -webkit-transition:opacity .25s ease;
+        -moz-transition:opacity .25s ease;
+
+        &:hover{ opacity:1; }
+
+        .download {
+          position: absolute;
+          left: 215px;
+          top: 440px;
+          width: 170px;
+
+          img {
+            width: 100%;
+            max-width: 170px;
+            margin: 0 auto;
+          }
+        }
+      }
+
+      .lock{ opacity:1; }
+    }
+
+    .clipping {
+      display: inline-block;
+      float: left;
+      width: 50%;
+      color: #777;
+      padding: 5px;
+      &:nth-child(2n+1) {
+        float: right;
+      }
+
+      .clipping-item{
+        float: left;
+        .source, .thumb{
+          margin-bottom: 10px;
+          max-width: 100%;
+        }
+
+        a{
+          color: #777;
+          text-decoration:none;
+        }
+      }
+    }
+
+    .fotorama{
+      .fotorama__caption{
+        top: 0;
+      }
+      .fotorama__nav,
+      .fotorama__caption__wrap {
+        background-color: rgba(102, 102, 102, 0.7);
+      }
+      .fotorama__nav{
+        border-bottom: 1px solid #444;
+      }
+      .fotorama__caption__wrap{
+        color: #ddd;
+        padding: 5px 10px;
+      }
+    }
+  }
+
+  .footer_nav{
+    background:#151515;
+    text-align:center;
+    ul { display:inline-table; }
+    ul li { display:inline; }
+  }
+
+  .smedia{
+    width:36px;
+    height:36px;
+    background-size: 36px 36px;
+    margin:10px;
+    background-color: rgba(0, 0, 0, 0);
+
+    &.fcbk{
+      background-image:url(../img/logo_fb.png);
+    }
+    &.twtr{
+      background-image:url(../img/twitter.png);
+    }
+    &.sptf{
+      background-image:url(../img/logo_sp.png);
+    }
+    &.rdio{
+      background-image:url(../img/rdio.png);
+    }
+    &.sndc{
+      background-image:url(../img/soundcloud.png);
+    }
+    &.utbe{
+      background-image:url(../img/logo_yt.png);
+    }
+    &.itns{
+      background-image:url(../img/logo_it.png);
+    }
+    &.dzer {
+      background-image: url(../img/logo_dzr.png);
+    }
+    &.igrm {
+      background-image: url(../img/logo_ig.png);
+    }
+    &.bcmp{
+      width:81px;
+      height:36px;
+      background-size: 81px 36px;
+      background-image:url(../img/logo_bc.png);
+    }
+    .smedia.lkdn{
+      background-image:url(../img/linkedin.png);
+    }
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0);
+    }
+  }
+}
+
+.release_box{
+  display:none;
+  position:absolute;
+  width:100%;
+  height:100vh;
+  top:0px;
+  left:0px;
+  bottom:0px;
+  right:0px;
+  background-color: rgba(0,0,0,.75);
+  text-align:center;
+  overflow: scroll;
+
+  .release_img{
+    display:none;
+    max-width:1100px;
+    margin: 30px;
+  }
+}
